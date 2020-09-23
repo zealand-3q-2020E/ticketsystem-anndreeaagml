@@ -4,16 +4,13 @@ using System.Text;
 
 namespace ClassLibrary
 {
-   public class MC
+   public class MC:Vehicle
     {
-        public string Licenseplate;
-        public DateTime Date;
 
         public MC() { }
 
-        public double Price() => 125;
+        public override double Price() => 125;
 
-        public string Vehicle() => "MC";
-
+        public override string VehicleType() => "MC";
     }
 }

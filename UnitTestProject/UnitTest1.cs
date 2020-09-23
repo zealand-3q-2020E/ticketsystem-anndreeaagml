@@ -35,7 +35,7 @@ namespace UnitTestProject
         {
             string expectedResult = "MC";
             MC test = new MC();
-            var actualResut = test.Vehicle();
+            var actualResut = test.VehicleType();
             Assert.AreEqual("MC", actualResut);
         }
     }

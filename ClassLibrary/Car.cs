@@ -2,16 +2,14 @@
 
 namespace ClassLibrary
 {
-    public class Car
+    public class Car:Vehicle
     {
-        public string Licenseplate;
-        public DateTime Date;
 
         public Car() { }
 
-        public double Price() => 240;
+        public override double Price() => 240;
 
-        public string VehicleType() => "Car";
+        public override string VehicleType() => "Car";
 
     }
 }
