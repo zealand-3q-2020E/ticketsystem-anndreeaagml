@@ -8,20 +8,35 @@ namespace UnitTestProject
         [TestMethod]
         public void CheckPrice()
         {
-            double expectedResult = 240;
             double actualResut;
             Car test=new Car();
             actualResut = test.Price();
-            Assert.AreEqual(expectedResult, expectedResult);
+            Assert.AreEqual(240, actualResut);
         }
 
         [TestMethod]
         public void CheckVehicleType()
         {
-            string expectedResult = "Car";
             Car test = new Car();
             var actualResut = test.VehicleType();
-            Assert.AreEqual(expectedResult, actualResut);
+            Assert.AreEqual("Car", actualResut);
+        }
+        [TestMethod]
+        public void CheckPriceMC()
+        {
+            double actualResut;
+            MC test = new MC();
+            actualResut = test.Price();
+            Assert.AreEqual(125, actualResut);
+        }
+
+        [TestMethod]
+        public void CheckVehicleTypeMC()
+        {
+            string expectedResult = "MC";
+            MC test = new MC();
+            var actualResut = test.Vehicle();
+            Assert.AreEqual("MC", actualResut);
         }
     }
 }
