@@ -8,8 +8,21 @@ namespace ClassLibrary
     {
 
         public MC() { }
-
-        public override double Price() => 125;
+        public MC(bool hasBrobizz)
+        {
+            brobizz = hasBrobizz;
+        }
+        public override double Price()
+        {
+            if (brobizz == true)
+            {
+                return 125 * 0.95;
+            }
+            else
+            {
+                return 125;
+            }
+        }
 
         public override string VehicleType() => "MC";
     }

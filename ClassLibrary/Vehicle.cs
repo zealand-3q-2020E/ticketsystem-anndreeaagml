@@ -9,9 +9,11 @@ namespace ClassLibrary
     {
         public string Licenseplate;
         public DateTime Date;
+        public bool brobizz=false;
 
         public Vehicle() { }
 
+        
         public void SetLicencePlate(string licenceplate)
         {
             if (licenceplate.Length <= 7)

@@ -65,5 +65,19 @@ namespace UnitTestProject
             test.SetLicencePlate("65421");
             Assert.AreEqual("65421", test.Licenseplate);
         }
+
+        [TestMethod]
+        public void TestDiscountWithBrobizz()
+        {
+            Vehicle test= new Car(true);
+            Assert.AreEqual(240*0.95, test.Price());
+        }
+
+        [TestMethod]
+        public void TestDiscountWithoutBrobizz()
+        {
+            Vehicle test= new Car();
+            Assert.AreEqual(240, test.Price());
+        }
     }
 }
