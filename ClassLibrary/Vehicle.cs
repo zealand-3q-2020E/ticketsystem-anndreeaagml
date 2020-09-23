@@ -7,8 +7,23 @@ namespace ClassLibrary
 {
    public abstract class Vehicle
     {
-        protected string Licenseplate;
-        protected DateTime Date;
+        public string Licenseplate;
+        public DateTime Date;
+
+        public Vehicle() { }
+
+        public void SetLicencePlate(string licenceplate)
+        {
+            if (licenceplate.Length <= 7)
+            {
+                Licenseplate = licenceplate;
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+        }
+
         public abstract double Price();
 
         public abstract string VehicleType();
